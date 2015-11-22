@@ -1,0 +1,1166 @@
+[
+    {
+        "outputFile": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/values-fr/values-fr.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 51,
+                    "endOffset": 102
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 51,
+                        "endOffset": 102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 107,
+                    "endColumn": 41,
+                    "endOffset": 144
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 107,
+                        "endColumn": 41,
+                        "endOffset": 144
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 149,
+                    "endColumn": 47,
+                    "endOffset": 192
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 149,
+                        "endColumn": 47,
+                        "endOffset": 192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 197,
+                    "endColumn": 52,
+                    "endOffset": 245
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 197,
+                        "endColumn": 52,
+                        "endOffset": 245
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 250,
+                    "endColumn": 55,
+                    "endOffset": 301
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 250,
+                        "endColumn": 55,
+                        "endOffset": 301
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 306,
+                    "endColumn": 56,
+                    "endOffset": 358
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 306,
+                        "endColumn": 56,
+                        "endOffset": 358
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 363,
+                    "endColumn": 51,
+                    "endOffset": 410
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 363,
+                        "endColumn": 51,
+                        "endOffset": 410
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 415,
+                    "endColumn": 59,
+                    "endOffset": 470
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 415,
+                        "endColumn": 59,
+                        "endOffset": 470
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 475,
+                    "endColumn": 49,
+                    "endOffset": 520
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 471,
+                        "endColumn": 45,
+                        "endOffset": 516
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 525,
+                    "endColumn": 66,
+                    "endOffset": 587
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 517,
+                        "endColumn": 62,
+                        "endOffset": 579
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 592,
+                    "endColumn": 54,
+                    "endOffset": 642
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 580,
+                        "endColumn": 50,
+                        "endOffset": 630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 647,
+                    "endColumn": 52,
+                    "endOffset": 695
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 631,
+                        "endColumn": 48,
+                        "endOffset": 679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 700,
+                    "endColumn": 56,
+                    "endOffset": 752
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 680,
+                        "endColumn": 52,
+                        "endOffset": 732
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 757,
+                    "endColumn": 46,
+                    "endOffset": 799
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 733,
+                        "endColumn": 42,
+                        "endOffset": 775
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 804,
+                    "endColumn": 59,
+                    "endOffset": 859
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 776,
+                        "endColumn": 55,
+                        "endOffset": 831
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 864,
+                    "endColumn": 53,
+                    "endOffset": 913
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 832,
+                        "endColumn": 49,
+                        "endOffset": 881
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 918,
+                    "endColumn": 65,
+                    "endOffset": 979
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 882,
+                        "endColumn": 61,
+                        "endOffset": 943
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 984,
+                    "endColumn": 68,
+                    "endOffset": 1048
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 944,
+                        "endColumn": 64,
+                        "endOffset": 1008
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1053,
+                    "endColumn": 69,
+                    "endOffset": 1118
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 0,
+                        "startOffset": 1009,
+                        "endColumn": 65,
+                        "endOffset": 1074
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1123,
+                    "endColumn": 50,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 0,
+                        "startOffset": 1075,
+                        "endColumn": 46,
+                        "endOffset": 1121
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 53,
+                    "endOffset": 1223
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 0,
+                        "startOffset": 1189,
+                        "endColumn": 49,
+                        "endOffset": 1238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1228,
+                    "endColumn": 70,
+                    "endOffset": 1294
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 0,
+                        "startOffset": 1122,
+                        "endColumn": 66,
+                        "endOffset": 1188
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1299,
+                    "endColumn": 60,
+                    "endOffset": 1355
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 0,
+                        "startOffset": 1239,
+                        "endColumn": 56,
+                        "endOffset": 1295
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1360,
+                    "endColumn": 73,
+                    "endOffset": 1429
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 0,
+                        "startOffset": 1296,
+                        "endColumn": 69,
+                        "endOffset": 1365
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1434,
+                    "endColumn": 37,
+                    "endOffset": 1467
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 0,
+                        "startOffset": 1366,
+                        "endColumn": 33,
+                        "endOffset": 1399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1472,
+                    "endColumn": 53,
+                    "endOffset": 1521
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 0,
+                        "startOffset": 1400,
+                        "endColumn": 49,
+                        "endOffset": 1449
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1526,
+                    "endColumn": 94,
+                    "endOffset": 1616
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 0,
+                        "startOffset": 1779,
+                        "endColumn": 90,
+                        "endOffset": 1869
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1621,
+                    "endColumn": 84,
+                    "endOffset": 1701
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 0,
+                        "startOffset": 1450,
+                        "endColumn": 80,
+                        "endOffset": 1530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1706,
+                    "endColumn": 83,
+                    "endOffset": 1785
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 0,
+                        "startOffset": 1531,
+                        "endColumn": 79,
+                        "endOffset": 1610
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1790,
+                    "endColumn": 73,
+                    "endOffset": 1859
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 0,
+                        "startOffset": 1611,
+                        "endColumn": 69,
+                        "endOffset": 1680
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1864,
+                    "endColumn": 90,
+                    "endOffset": 1950
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 0,
+                        "startOffset": 1870,
+                        "endColumn": 86,
+                        "endOffset": 1956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 1955,
+                    "endColumn": 56,
+                    "endOffset": 2007
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 0,
+                        "startOffset": 1957,
+                        "endColumn": 52,
+                        "endOffset": 2009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2012,
+                    "endColumn": 101,
+                    "endOffset": 2109
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 0,
+                        "startOffset": 1681,
+                        "endColumn": 97,
+                        "endOffset": 1778
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2114,
+                    "endColumn": 56,
+                    "endOffset": 2166
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 52,
+                        "startOffset": 2009,
+                        "endColumn": 104,
+                        "endOffset": 2061
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 2171,
+                    "endColumn": 48,
+                    "endOffset": 2215
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 0,
+                        "startOffset": 2062,
+                        "endColumn": 44,
+                        "endOffset": 2106
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 2220,
+                    "endColumn": 46,
+                    "endOffset": 2262
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 0,
+                        "startOffset": 2107,
+                        "endColumn": 42,
+                        "endOffset": 2149
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2267,
+                    "endColumn": 58,
+                    "endOffset": 2321
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 0,
+                        "startOffset": 2150,
+                        "endColumn": 54,
+                        "endOffset": 2204
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 2326,
+                    "endColumn": 71,
+                    "endOffset": 2393
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 0,
+                        "startOffset": 2205,
+                        "endColumn": 67,
+                        "endOffset": 2272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2398,
+                    "endColumn": 66,
+                    "endOffset": 2460
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 0,
+                        "startOffset": 2273,
+                        "endColumn": 62,
+                        "endOffset": 2335
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2465,
+                    "endColumn": 67,
+                    "endOffset": 2528
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 0,
+                        "startOffset": 2336,
+                        "endColumn": 63,
+                        "endOffset": 2399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2533,
+                    "endColumn": 58,
+                    "endOffset": 2587
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 0,
+                        "startOffset": 2400,
+                        "endColumn": 54,
+                        "endOffset": 2454
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2592,
+                    "endColumn": 51,
+                    "endOffset": 2639
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 0,
+                        "startOffset": 2455,
+                        "endColumn": 47,
+                        "endOffset": 2502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2644,
+                    "endColumn": 42,
+                    "endOffset": 2682
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 0,
+                        "startOffset": 2503,
+                        "endColumn": 38,
+                        "endOffset": 2541
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2687,
+                    "endColumn": 48,
+                    "endOffset": 2731
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 0,
+                        "startOffset": 2542,
+                        "endColumn": 44,
+                        "endOffset": 2586
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 2736,
+                    "endColumn": 67,
+                    "endOffset": 2799
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 0,
+                        "startOffset": 2587,
+                        "endColumn": 63,
+                        "endOffset": 2650
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 2804,
+                    "endColumn": 57,
+                    "endOffset": 2857
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 0,
+                        "startOffset": 2651,
+                        "endColumn": 53,
+                        "endOffset": 2704
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 2862,
+                    "endColumn": 45,
+                    "endOffset": 2903
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 0,
+                        "startOffset": 2705,
+                        "endColumn": 41,
+                        "endOffset": 2746
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 2908,
+                    "endColumn": 54,
+                    "endOffset": 2958
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 0,
+                        "startOffset": 2747,
+                        "endColumn": 50,
+                        "endOffset": 2797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 2963,
+                    "endColumn": 163,
+                    "endOffset": 3122
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 0,
+                        "startOffset": 2798,
+                        "endColumn": 174,
+                        "endOffset": 2972
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 3127,
+                    "endColumn": 72,
+                    "endOffset": 3195
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 0,
+                        "startOffset": 2973,
+                        "endColumn": 68,
+                        "endOffset": 3041
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 3200,
+                    "endColumn": 79,
+                    "endOffset": 3275
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 0,
+                        "startOffset": 3042,
+                        "endColumn": 75,
+                        "endOffset": 3117
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 3280,
+                    "endColumn": 63,
+                    "endOffset": 3339
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 0,
+                        "startOffset": 3118,
+                        "endColumn": 59,
+                        "endOffset": 3177
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 3344,
+                    "endColumn": 78,
+                    "endOffset": 3418
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 0,
+                        "startOffset": 3178,
+                        "endColumn": 74,
+                        "endOffset": 3252
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 3423,
+                    "endColumn": 57,
+                    "endOffset": 3476
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 0,
+                        "startOffset": 3253,
+                        "endColumn": 53,
+                        "endOffset": 3306
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 3481,
+                    "endColumn": 53,
+                    "endOffset": 3530
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 0,
+                        "startOffset": 3307,
+                        "endColumn": 49,
+                        "endOffset": 3356
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 3535,
+                    "endColumn": 53,
+                    "endOffset": 3584
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 0,
+                        "startOffset": 3357,
+                        "endColumn": 49,
+                        "endOffset": 3406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 3589,
+                    "endColumn": 47,
+                    "endOffset": 3632
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 0,
+                        "startOffset": 3438,
+                        "endColumn": 43,
+                        "endOffset": 3481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 3637,
+                    "endColumn": 63,
+                    "endOffset": 3696
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 0,
+                        "startOffset": 3482,
+                        "endColumn": 59,
+                        "endOffset": 3541
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 3701,
+                    "endColumn": 45,
+                    "endOffset": 3742
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 0,
+                        "startOffset": 3542,
+                        "endColumn": 41,
+                        "endOffset": 3583
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 3747,
+                    "endColumn": 56,
+                    "endOffset": 3799
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 0,
+                        "startOffset": 3584,
+                        "endColumn": 52,
+                        "endOffset": 3636
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 3804,
+                    "endColumn": 54,
+                    "endOffset": 3854
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/values-fr/strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 0,
+                        "startOffset": 3637,
+                        "endColumn": 50,
+                        "endOffset": 3687
+                    }
+                }
+            }
+        ]
+    }
+]

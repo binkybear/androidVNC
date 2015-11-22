@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/entertext.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/entertext.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/connection_list.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/connection_list.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/intro_dialog.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/intro_dialog.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/zoom_controls.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/zoom_controls.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/metakey.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/metakey.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/importexport.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/importexport.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/canvas.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/canvas.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/layout/repeater_dialog.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/layout/repeater_dialog.xml"
+    }
+]

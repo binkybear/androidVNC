@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/menu/vnccanvasactivitymenu.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/menu/vnccanvasactivitymenu.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/menu/intro_dialog_menu.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/menu/intro_dialog_menu.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/menu/androidvncmenu.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/menu/androidvncmenu.xml"
+    },
+    {
+        "merged": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/build/intermediates/res/merged/debug/menu/metakeymenu.xml",
+        "source": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/res/menu/metakeymenu.xml"
+    }
+]
