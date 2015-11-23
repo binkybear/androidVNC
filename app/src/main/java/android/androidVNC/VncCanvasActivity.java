@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.antlersoft.android.bc.BCFactory;
+import com.antlersoft.android.zoomer;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -585,7 +586,7 @@ public class VncCanvasActivity extends Activity {
 
 		    if (extras != null) {
 		  	    connection.Gen_populate((ContentValues) extras
-				  	.getParcelable(VncConstants.CONNECTION));
+						.getParcelable(VncConstants.CONNECTION));
 		    }
 		    if (connection.getPort() == 0)
 			    connection.setPort(5900);
@@ -652,7 +653,7 @@ public class VncCanvasActivity extends Activity {
 			@Override
 			public void onClick(View v) {
               InputMethodManager inputMgr = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-              inputMgr.toggleSoftInput(0, 0);
+				inputMgr.toggleSoftInput(0, 0);
 			}
 
 		});
