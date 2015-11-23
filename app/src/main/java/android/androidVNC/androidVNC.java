@@ -65,7 +65,11 @@ public class androidVNC extends Activity {
 	public void onCreate(Bundle icicle) {
 
 		super.onCreate(icicle);
-		setContentView(R.layout.main);
+
+
+
+
+        setContentView(R.layout.main);
         Log.d("NH VNC", "HELLO BINKY");
 		ipText = (EditText) findViewById(R.id.textIP);
 		portText = (EditText) findViewById(R.id.textPORT);
@@ -108,28 +112,47 @@ public class androidVNC extends Activity {
 		});
 		spinnerConnection.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
-			/* (non-Javadoc)
-			 * @see android.widget.AdapterView.OnItemLongClickListener#onItemLongClick(android.widget.AdapterView, android.view.View, int, long)
-			 */
-			@Override
-			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-					int arg2, long arg3) {
-				spinnerConnection.setSelection(arg2);
-				selected = (ConnectionBean)spinnerConnection.getItemAtPosition(arg2);
-				canvasStart();
-				return true;
-			}
-			
-		});
+            /* (non-Javadoc)
+             * @see android.widget.AdapterView.OnItemLongClickListener#onItemLongClick(android.widget.AdapterView, android.view.View, int, long)
+             */
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int arg2, long arg3) {
+                spinnerConnection.setSelection(arg2);
+                selected = (ConnectionBean) spinnerConnection.getItemAtPosition(arg2);
+                canvasStart();
+                return true;
+            }
+
+        });
 		repeaterText = (TextView)findViewById(R.id.textRepeaterId);
 		goButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				canvasStart();
-			}
-		});
+            @Override
+            public void onClick(View view) {
+                canvasStart();
+            }
+        });
 		
 		database = new VncDatabase(this);
+
+        Intent myIntent = getIntent();
+        String action = myIntent.getAction();
+        Log.d("IntentAction: ", action);
+        Boolean actionID;
+
+        if(action.equals("android.intent.action.MAIN")){
+            actionID=myIntent.getBooleanExtra("com.offsec.nhvnc.EXTRA_CONN_DATA", false);
+            if(actionID){
+                Log.d("EXTRA_CONN_DATA: ", actionID.toString());
+                arriveOnPage();
+                ipText.setText(myIntent.getStringExtra("R_IP"));
+                portText.setText(myIntent.getStringExtra("R_PORT"));
+                passwordText.setText(myIntent.getStringExtra("PASSWD"));
+                textNickname.setText(myIntent.getStringExtra("NICK"));
+                textUsername.setText(myIntent.getStringExtra("USER"));
+                canvasStart();
+            }
+        }
 	}
 	
 	protected void onDestroy() {
@@ -163,7 +186,7 @@ public class androidVNC extends Activity {
 	@Override
 	public boolean onMenuOpened(int featureId, Menu menu) {
 		menu.findItem(R.id.itemDeleteConnection).setEnabled(selected!=null && ! selected.isNew());
-		menu.findItem(R.id.itemSaveAsCopy).setEnabled(selected!=null && ! selected.isNew());
+		menu.findItem(R.id.itemSaveAsCopy).setEnabled(selected != null && !selected.isNew());
 		return true;
 	}
 
@@ -340,6 +363,7 @@ public class androidVNC extends Activity {
 	}
 	
 	private void canvasStart() {
+		Log.d("canvasStart()",Utils.getMemoryInfo(this).toString());
 		if (selected == null) return;
 		MemoryInfo info = Utils.getMemoryInfo(this);
 		if (info.lowMemory) {
@@ -380,12 +404,12 @@ public class androidVNC extends Activity {
 			db.endTransaction();
 		}
 	}
-	
 	private void vnc() {
 		updateSelectedFromView();
 		saveAndWriteRecent();
 		Intent intent = new Intent(this, VncCanvasActivity.class);
-		intent.putExtra(VncConstants.CONNECTION,selected.Gen_getValues());
+        Log.d("VncConstants", selected.Gen_getValues().toString());
+        intent.putExtra(VncConstants.CONNECTION, selected.Gen_getValues());
 		startActivity(intent);
 	}
 }
