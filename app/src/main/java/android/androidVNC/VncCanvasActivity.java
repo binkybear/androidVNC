@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.antlersoft.android.bc.BCFactory;
-import com.antlersoft.android.zoomer;
+import com.antlersoft.android.zoomer.*;
 
 import android.app.Activity;
 import android.app.Dialog;
