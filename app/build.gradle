@@ -3,13 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "23.0.2"
-
     defaultConfig {
-        applicationId "android.androidVNC"
+        applicationId 'com.offsec.nhvnc'
         minSdkVersion 3
         targetSdkVersion 4
     }
-
     buildTypes {
         release {
             minifyEnabled true
@@ -20,6 +18,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project (':zoomerWithKeys')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':zoomerWithKeys')
 }

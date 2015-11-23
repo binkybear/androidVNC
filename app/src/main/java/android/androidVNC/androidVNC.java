@@ -28,6 +28,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,21 +66,21 @@ public class androidVNC extends Activity {
 
 		super.onCreate(icicle);
 		setContentView(R.layout.main);
-
+        Log.d("NH VNC", "HELLO BINKY");
 		ipText = (EditText) findViewById(R.id.textIP);
 		portText = (EditText) findViewById(R.id.textPORT);
 		passwordText = (EditText) findViewById(R.id.textPASSWORD);
 		textNickname = (EditText) findViewById(R.id.textNickname);
 		textUsername = (EditText) findViewById(R.id.textUsername);
 		goButton = (Button) findViewById(R.id.buttonGO);
-		((Button) findViewById(R.id.buttonRepeater)).setOnClickListener(new View.OnClickListener() {
-			
+		findViewById(R.id.buttonRepeater).setOnClickListener(new View.OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
 				showDialog(R.layout.repeater_dialog);
 			}
 		});
-		((Button)findViewById(R.id.buttonImportExport)).setOnClickListener(new View.OnClickListener() {
+		findViewById(R.id.buttonImportExport).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				showDialog(R.layout.importexport);
@@ -87,7 +88,7 @@ public class androidVNC extends Activity {
 		});
 		colorSpinner = (Spinner)findViewById(R.id.colorformat);
 		COLORMODEL[] models=COLORMODEL.values();
-		ArrayAdapter<COLORMODEL> colorSpinnerAdapter = new ArrayAdapter<COLORMODEL>(this, android.R.layout.simple_spinner_item, models);
+		ArrayAdapter<COLORMODEL> colorSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, models);
 		groupForceFullScreen = (RadioGroup)findViewById(R.id.groupForceFullScreen);
 		checkboxKeepPassword = (CheckBox)findViewById(R.id.checkboxKeepPassword);
 		checkboxLocalCursor = (CheckBox)findViewById(R.id.checkboxUseLocalCursor);
@@ -254,7 +255,7 @@ public class androidVNC extends Activity {
 		}
 		catch (NumberFormatException nfe)
 		{
-			
+			Log.d("NumberFormatException", nfe.toString());
 		}
 		selected.setNickname(textNickname.getText().toString());
 		selected.setUserName(textUsername.getText().toString());
@@ -288,7 +289,7 @@ public class androidVNC extends Activity {
 	 */
 	static MostRecentBean getMostRecent(SQLiteDatabase db)
 	{
-		ArrayList<MostRecentBean> recents = new ArrayList<MostRecentBean>(1);
+		ArrayList<MostRecentBean> recents = new ArrayList<>(1);
 		MostRecentBean.getAll(db, MostRecentBean.GEN_TABLE_NAME, recents, MostRecentBean.GEN_NEW);
 		if (recents.size() == 0)
 			return null;
@@ -296,7 +297,7 @@ public class androidVNC extends Activity {
 	}
 	
 	void arriveOnPage() {
-		ArrayList<ConnectionBean> connections=new ArrayList<ConnectionBean>();
+		ArrayList<ConnectionBean> connections=new ArrayList<>();
 		ConnectionBean.getAll(database.getReadableDatabase(), ConnectionBean.GEN_TABLE_NAME, connections, ConnectionBean.newInstance);
 		Collections.sort(connections);
 		connections.add(0, new ConnectionBean());
@@ -316,7 +317,7 @@ public class androidVNC extends Activity {
 				}
 			}
 		}
-		spinnerConnection.setAdapter(new ArrayAdapter<ConnectionBean>(this,android.R.layout.simple_spinner_item,
+		spinnerConnection.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,
 				connections.toArray(new ConnectionBean[connections.size()])));
 		spinnerConnection.setSelection(connectionIndex,false);
 		selected=connections.get(connectionIndex);
