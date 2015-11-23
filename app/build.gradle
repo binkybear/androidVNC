@@ -8,6 +8,9 @@ android {
         minSdkVersion 3
         targetSdkVersion 4
     }
+    lintOptions {
+        disable 'MissingTranslation'
+    }
     buildTypes {
         release {
             minifyEnabled true
