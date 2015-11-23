@@ -1,0 +1,30 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:2:1-12:12
+	package
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:3:7-46
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:5:7-32
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:4:7-30
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:6:5-9:19
+	android:label
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:6:18-50
+uses-sdk
+ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:10:5-43
+	android:targetSdkVersion
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml:10:15-40
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/AndroidManifest.xml

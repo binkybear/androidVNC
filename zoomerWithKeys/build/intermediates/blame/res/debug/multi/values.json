@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/build/intermediates/res/merged/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 29,
+                    "endOffset": 80
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 102,
+                        "endColumn": 37,
+                        "endOffset": 135
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 85,
+                    "endColumn": 46,
+                    "endOffset": 127
+                },
+                "from": {
+                    "file": "/Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/zoomerWithKeys/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 46,
+                        "endOffset": 97
+                    }
+                }
+            }
+        ]
+    }
+]

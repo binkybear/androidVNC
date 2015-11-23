@@ -15,7 +15,7 @@
     <supports-screens android:anyDensity="true" />
 
     <application
-        android:debuggable="false"
+        android:debuggable="true"
         android:icon="@drawable/icon"
         android:label="androidVNC" >
         <activity

@@ -26,8 +26,6 @@ import java.util.List;
 
 import com.antlersoft.android.bc.BCFactory;
 
-import com.antlersoft.android.zoomer.ZoomControls;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ContentValues;

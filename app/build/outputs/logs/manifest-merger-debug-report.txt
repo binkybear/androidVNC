@@ -22,7 +22,7 @@ ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/sr
 	android:label
 		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/AndroidManifest.xml:4:48-74
 	android:debuggable
-		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/AndroidManifest.xml:4:75-101
+		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/AndroidManifest.xml:4:75-100
 	android:icon
 		ADDED from /Volumes/Git Workspace/android-vnc-viewer-read-only/androidVNC/app/src/main/AndroidManifest.xml:4:18-47
 activity#android.androidVNC.androidVNC
