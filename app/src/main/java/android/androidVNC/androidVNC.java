@@ -67,10 +67,7 @@ public class androidVNC extends Activity {
 		super.onCreate(icicle);
 
 
-
-
         setContentView(R.layout.main);
-        Log.d("NH VNC", "HELLO BINKY");
 		ipText = (EditText) findViewById(R.id.textIP);
 		portText = (EditText) findViewById(R.id.textPORT);
 		passwordText = (EditText) findViewById(R.id.textPASSWORD);
@@ -143,13 +140,14 @@ public class androidVNC extends Activity {
         if(action.equals("android.intent.action.MAIN")){
             actionID=myIntent.getBooleanExtra("com.offsec.nhvnc.EXTRA_CONN_DATA", false);
             if(actionID){
-                Log.d("EXTRA_CONN_DATA: ", actionID.toString());
+               // Log.d("EXTRA_CONN_DATA: ", actionID.toString());
                 arriveOnPage();
                 ipText.setText(myIntent.getStringExtra("R_IP"));
                 portText.setText(myIntent.getStringExtra("R_PORT"));
                 passwordText.setText(myIntent.getStringExtra("PASSWD"));
                 textNickname.setText(myIntent.getStringExtra("NICK"));
                 textUsername.setText(myIntent.getStringExtra("USER"));
+                colorSpinner.setSelection(myIntent.getIntExtra("COLORMODEL", 0));
                 canvasStart();
             }
         }
@@ -282,12 +280,12 @@ public class androidVNC extends Activity {
 		}
 		selected.setNickname(textNickname.getText().toString());
 		selected.setUserName(textUsername.getText().toString());
-		selected.setForceFull(groupForceFullScreen.getCheckedRadioButtonId()==R.id.radioForceFullScreenAuto ? BitmapImplHint.AUTO : (groupForceFullScreen.getCheckedRadioButtonId()==R.id.radioForceFullScreenOn ? BitmapImplHint.FULL : BitmapImplHint.TILE));
-		selected.setPassword(passwordText.getText().toString());
-		selected.setKeepPassword(checkboxKeepPassword.isChecked());
-		selected.setUseLocalCursor(checkboxLocalCursor.isChecked());
-		selected.setColorModel(((COLORMODEL)colorSpinner.getSelectedItem()).nameString());
-		if (repeaterTextSet)
+        selected.setForceFull(groupForceFullScreen.getCheckedRadioButtonId()==R.id.radioForceFullScreenAuto ? BitmapImplHint.AUTO : (groupForceFullScreen.getCheckedRadioButtonId()==R.id.radioForceFullScreenOn ? BitmapImplHint.FULL : BitmapImplHint.TILE));
+        selected.setPassword(passwordText.getText().toString());
+        selected.setKeepPassword(checkboxKeepPassword.isChecked());
+        selected.setUseLocalCursor(checkboxLocalCursor.isChecked());
+        selected.setColorModel(((COLORMODEL)colorSpinner.getSelectedItem()).nameString());
+        if (repeaterTextSet)
 		{
 			selected.setRepeaterId(repeaterText.getText().toString());
 			selected.setUseRepeater(true);
@@ -363,7 +361,7 @@ public class androidVNC extends Activity {
 	}
 	
 	private void canvasStart() {
-		Log.d("canvasStart()",Utils.getMemoryInfo(this).toString());
+		// Log.d("canvasStart()",Utils.getMemoryInfo(this).toString());
 		if (selected == null) return;
 		MemoryInfo info = Utils.getMemoryInfo(this);
 		if (info.lowMemory) {
