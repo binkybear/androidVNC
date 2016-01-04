@@ -60,7 +60,7 @@ public class androidVNC extends Activity {
 	private CheckBox checkboxKeepPassword;
 	private CheckBox checkboxLocalCursor;
 	private boolean repeaterTextSet;
-
+	private boolean fromIntent = false;
 	@Override
 	public void onCreate(Bundle icicle) {
 
@@ -140,6 +140,7 @@ public class androidVNC extends Activity {
         if(action.equals("android.intent.action.MAIN")){
             actionID=myIntent.getBooleanExtra("com.offsec.nhvnc.EXTRA_CONN_DATA", false);
             if(actionID){
+				fromIntent=true;
                // Log.d("EXTRA_CONN_DATA: ", actionID.toString());
                 arriveOnPage();
                 ipText.setText(myIntent.getStringExtra("R_IP"));
@@ -406,8 +407,11 @@ public class androidVNC extends Activity {
 		updateSelectedFromView();
 		saveAndWriteRecent();
 		Intent intent = new Intent(this, VncCanvasActivity.class);
-        Log.d("VncConstants", selected.Gen_getValues().toString());
-        intent.putExtra(VncConstants.CONNECTION, selected.Gen_getValues());
+		Log.d("VncConstants", selected.Gen_getValues().toString());
+		intent.putExtra(VncConstants.CONNECTION, selected.Gen_getValues());
 		startActivity(intent);
+		if(fromIntent){
+			finish();
+		}
 	}
 }
