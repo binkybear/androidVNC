@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId 'com.offsec.nhvnc'
-        minSdkVersion 3
-        targetSdkVersion 4
+        minSdkVersion 5
+        targetSdkVersion 5
     }
     lintOptions {
         disable 'MissingTranslation'

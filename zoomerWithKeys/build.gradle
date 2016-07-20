@@ -3,8 +3,8 @@ android {
     compileSdkVersion 21
     buildToolsVersion "19.1.0"
     defaultConfig {
-        minSdkVersion 3
-        targetSdkVersion 3
+        minSdkVersion 5
+        targetSdkVersion 5
     }
     buildTypes {
         release {
