@@ -52,6 +52,7 @@ import android.widget.Toast;
 import com.antlersoft.android.bc.BCFactory;
 
 import com.sun.jna.examples.unix.X11KeySymDef;
+import com.sun.jna.examples.unix.XF86KeySymDef;
 
 public class VncCanvas extends ImageView {
 	private final static String TAG = "VncCanvas";
@@ -507,8 +508,8 @@ public class VncCanvas extends ImageView {
 			case KeyEvent.KEYCODE_DPAD_LEFT:                        return X11KeySymDef.XK_Left;
 			case KeyEvent.KEYCODE_DPAD_RIGHT:                       return X11KeySymDef.XK_Right;
 			case KeyEvent.KEYCODE_DPAD_CENTER:                      return X11KeySymDef.XK_Return;
-		//	case KeyEvent.KEYCODE_VOLUME_UP:                        return X11KeySymDef.XK_VOLUME_UP;
-		//	case KeyEvent.KEYCODE_VOLUME_DOWN:                      return X11KeySymDef.XK_VOLUME_DOWN;
+			case KeyEvent.KEYCODE_VOLUME_UP:                        return XF86KeySymDef.XF86XK_AudioRaiseVolume;
+			case KeyEvent.KEYCODE_VOLUME_DOWN:                      return XF86KeySymDef.XF86XK_AudioLowerVolume;
 		//	case KeyEvent.KEYCODE_POWER:                            return X11KeySymDef.XK_POWER;
 		//	case KeyEvent.KEYCODE_CAMERA:                           return X11KeySymDef.XK_CAMERA;
 		//	case KeyEvent.KEYCODE_CLEAR:                            return X11KeySymDef.XK_CLEAR;
@@ -547,8 +548,8 @@ public class VncCanvas extends ImageView {
 			case KeyEvent.KEYCODE_TAB:                              return X11KeySymDef.XK_Tab;
 			case KeyEvent.KEYCODE_SPACE:                            return X11KeySymDef.XK_space;
 //			case KeyEvent.KEYCODE_SYM:                              return X11KeySymDef.XK_SYM;
-//			case KeyEvent.KEYCODE_EXPLORER:                         return X11KeySymDef.XK_EXPLORER;
-//			case KeyEvent.KEYCODE_ENVELOPE:                         return X11KeySymDef.XK_ENVELOPE;
+			case KeyEvent.KEYCODE_EXPLORER:                         return XF86KeySymDef.XF86XK_Explorer;
+			case KeyEvent.KEYCODE_ENVELOPE:                         return XF86KeySymDef.XF86XK_Mail;
 			case KeyEvent.KEYCODE_ENTER:                            return X11KeySymDef.XK_Return;
 			case KeyEvent.KEYCODE_DEL:                              return X11KeySymDef.XK_BackSpace;
 			case KeyEvent.KEYCODE_GRAVE:                            return X11KeySymDef.XK_grave;
@@ -567,14 +568,14 @@ public class VncCanvas extends ImageView {
 			case KeyEvent.KEYCODE_PLUS:                             return X11KeySymDef.XK_KP_Add;
 			case KeyEvent.KEYCODE_MENU:                             return X11KeySymDef.XK_Menu;
 //			case KeyEvent.KEYCODE_NOTIFICATION:                     return X11KeySymDef.XK_NOTIFICATION;
-//			case KeyEvent.KEYCODE_SEARCH:                           return X11KeySymDef.XK_SEARCH;
-//			case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:                 return X11KeySymDef.XK_MEDIA_PLAY_PAUSE;
-//			case KeyEvent.KEYCODE_MEDIA_STOP:                       return X11KeySymDef.XK_MEDIA_STOP;
-//			case KeyEvent.KEYCODE_MEDIA_NEXT:                       return X11KeySymDef.XK_MEDIA_NEXT;
-//			case KeyEvent.KEYCODE_MEDIA_PREVIOUS:                   return X11KeySymDef.XK_MEDIA_PREVIOUS;
-//			case KeyEvent.KEYCODE_MEDIA_REWIND:                     return X11KeySymDef.XK_MEDIA_REWIND;
-//			case KeyEvent.KEYCODE_MEDIA_FAST_FORWARD:               return X11KeySymDef.XK_MEDIA_FAST_FORWARD;
-//			case KeyEvent.KEYCODE_MUTE:                             return X11KeySymDef.XK_MUTE;
+			case KeyEvent.KEYCODE_SEARCH:                           return XF86KeySymDef.XF86XK_Search;
+//			case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:                 return XF86KeySymDef.XF86XK_AudioPause;
+			case KeyEvent.KEYCODE_MEDIA_STOP:                       return XF86KeySymDef.XF86XK_AudioStop;
+			case KeyEvent.KEYCODE_MEDIA_NEXT:                       return XF86KeySymDef.XF86XK_AudioNext;
+			case KeyEvent.KEYCODE_MEDIA_PREVIOUS:                   return XF86KeySymDef.XF86XK_AudioPrev;
+			case KeyEvent.KEYCODE_MEDIA_REWIND:                     return XF86KeySymDef.XF86XK_AudioRewind;
+			case KeyEvent.KEYCODE_MEDIA_FAST_FORWARD:               return XF86KeySymDef.XF86XK_AudioForward;
+			case KeyEvent.KEYCODE_MUTE:                             return XF86KeySymDef.XF86XK_AudioMute;
 			case KeyEvent.KEYCODE_PAGE_UP:                          return X11KeySymDef.XK_Page_Up;
 			case KeyEvent.KEYCODE_PAGE_DOWN:                        return X11KeySymDef.XK_Page_Down;
 //			case KeyEvent.KEYCODE_PICTSYMBOLS:                      return X11KeySymDef.XK_PICTSYMBOLS;
@@ -608,12 +609,12 @@ public class VncCanvas extends ImageView {
 			case KeyEvent.KEYCODE_MOVE_HOME:                        return X11KeySymDef.XK_Home;
 			case KeyEvent.KEYCODE_MOVE_END:                         return X11KeySymDef.XK_End;
 			case KeyEvent.KEYCODE_INSERT:                           return X11KeySymDef.XK_Insert;
-//			case KeyEvent.KEYCODE_FORWARD:                          return X11KeySymDef.XK_FORWARD;
-//			case KeyEvent.KEYCODE_MEDIA_PLAY:                       return X11KeySymDef.XK_MEDIA_PLAY;
-//			case KeyEvent.KEYCODE_MEDIA_PAUSE:                      return X11KeySymDef.XK_MEDIA_PAUSE;
-//			case KeyEvent.KEYCODE_MEDIA_CLOSE:                      return X11KeySymDef.XK_MEDIA_CLOSE;
-//			case KeyEvent.KEYCODE_MEDIA_EJECT:                      return X11KeySymDef.XK_MEDIA_EJECT;
-//			case KeyEvent.KEYCODE_MEDIA_RECORD:                     return X11KeySymDef.XK_MEDIA_RECORD;
+			case KeyEvent.KEYCODE_FORWARD:                          return XF86KeySymDef.XF86XK_Forward;
+			case KeyEvent.KEYCODE_MEDIA_PLAY:                       return XF86KeySymDef.XF86XK_AudioPlay;
+			case KeyEvent.KEYCODE_MEDIA_PAUSE:                      return XF86KeySymDef.XF86XK_AudioPause;
+			case KeyEvent.KEYCODE_MEDIA_CLOSE:                      return XF86KeySymDef.XF86XK_Close;
+			case KeyEvent.KEYCODE_MEDIA_EJECT:                      return XF86KeySymDef.XF86XK_Eject;
+			case KeyEvent.KEYCODE_MEDIA_RECORD:                     return XF86KeySymDef.XF86XK_AudioRecord;
 			case KeyEvent.KEYCODE_F1:                               return X11KeySymDef.XK_F1;
 			case KeyEvent.KEYCODE_F2:                               return X11KeySymDef.XK_F2;
 			case KeyEvent.KEYCODE_F3:                               return X11KeySymDef.XK_F3;
@@ -647,7 +648,7 @@ public class VncCanvas extends ImageView {
 			case KeyEvent.KEYCODE_NUMPAD_EQUALS:                    return X11KeySymDef.XK_KP_Equal;
 //			case KeyEvent.KEYCODE_NUMPAD_LEFT_PAREN:                return X11KeySymDef.XK_NUMPAD_LEFT_PAREN;
 //			case KeyEvent.KEYCODE_NUMPAD_RIGHT_PAREN:               return X11KeySymDef.XK_NUMPAD_RIGHT_PAREN;
-//			case KeyEvent.KEYCODE_VOLUME_MUTE:                      return X11KeySymDef.XK_VOLUME_MUTE;
+			case KeyEvent.KEYCODE_VOLUME_MUTE:                      return XF86KeySymDef.XF86XK_AudioMute;
 //			case KeyEvent.KEYCODE_INFO:                             return X11KeySymDef.XK_INFO;
 //			case KeyEvent.KEYCODE_CHANNEL_UP:                       return X11KeySymDef.XK_CHANNEL_UP;
 //			case KeyEvent.KEYCODE_CHANNEL_DOWN:                     return X11KeySymDef.XK_CHANNEL_DOWN;
@@ -690,10 +691,10 @@ public class VncCanvas extends ImageView {
 //			case KeyEvent.KEYCODE_LANGUAGE_SWITCH:                  return X11KeySymDef.XK_LANGUAGE_SWITCH;
 //			case KeyEvent.KEYCODE_MANNER_MODE:                      return X11KeySymDef.XK_MANNER_MODE;
 //			case KeyEvent.KEYCODE_3D_MODE:                          return X11KeySymDef.XK_3D_MODE;
-//			case KeyEvent.KEYCODE_CONTACTS:                         return X11KeySymDef.XK_CONTACTS;
-//			case KeyEvent.KEYCODE_CALENDAR:                         return X11KeySymDef.XK_CALENDAR;
-//			case KeyEvent.KEYCODE_MUSIC:                            return X11KeySymDef.XK_MUSIC;
-//			case KeyEvent.KEYCODE_CALCULATOR:                       return X11KeySymDef.XK_CALCULATOR;
+			case KeyEvent.KEYCODE_CONTACTS:                         return XF86KeySymDef.XF86XK_Book;
+			case KeyEvent.KEYCODE_CALENDAR:                         return XF86KeySymDef.XF86XK_Calendar;
+			case KeyEvent.KEYCODE_MUSIC:                            return XF86KeySymDef.XF86XK_Music;
+			case KeyEvent.KEYCODE_CALCULATOR:                       return XF86KeySymDef.XF86XK_Calculator;
 //			case KeyEvent.KEYCODE_ZENKAKU_HANKAKU:                  return X11KeySymDef.XK_ZENKAKU_HANKAKU;
 //			case KeyEvent.KEYCODE_EISU:                             return X11KeySymDef.XK_EISU;
 //			case KeyEvent.KEYCODE_MUHENKAN:                         return X11KeySymDef.XK_MUHENKAN;
@@ -703,8 +704,8 @@ public class VncCanvas extends ImageView {
 //			case KeyEvent.KEYCODE_RO:                               return X11KeySymDef.XK_RO;
 //			case KeyEvent.KEYCODE_KANA:                             return X11KeySymDef.XK_KANA;
 //			case KeyEvent.KEYCODE_ASSIST:                           return X11KeySymDef.XK_ASSIST;
-//			case KeyEvent.KEYCODE_BRIGHTNESS_DOWN:                  return X11KeySymDef.XK_BRIGHTNESS_DOWN;
-//			case KeyEvent.KEYCODE_BRIGHTNESS_UP:                    return X11KeySymDef.XK_BRIGHTNESS_UP;
+			case KeyEvent.KEYCODE_BRIGHTNESS_DOWN:                  return XF86KeySymDef.XF86XK_MonBrightnessDown;
+			case KeyEvent.KEYCODE_BRIGHTNESS_UP:                    return XF86KeySymDef.XF86XK_MonBrightnessUp;
 //			case KeyEvent.KEYCODE_MEDIA_AUDIO_TRACK:                return X11KeySymDef.XK_MEDIA_AUDIO_TRACK;
 //			case KeyEvent.KEYCODE_SLEEP:                            return X11KeySymDef.XK_SLEEP;
 //			case KeyEvent.KEYCODE_WAKEUP:                           return X11KeySymDef.XK_WAKEUP;
@@ -756,6 +757,7 @@ public class VncCanvas extends ImageView {
 //			case KeyEvent.KEYCODE_MEDIA_STEP_FORWARD:               return X11KeySymDef.XK_MEDIA_STEP_FORWARD;
 //			case KeyEvent.KEYCODE_MEDIA_STEP_BACKWARD:              return X11KeySymDef.XK_MEDIA_STEP_BACKWARD;
 //			case KeyEvent.KEYCODE_SOFT_SLEEP:                       return X11KeySymDef.XK_SOFT_SLEEP;
+			case 265:                                               return XF86KeySymDef.XF86XK_WWW;
             default:                                                return 0;
 		}
 	}
@@ -1248,7 +1250,7 @@ public class VncCanvas extends ImageView {
 				}
 				if (down)
 					lastKeyDown = key;
-				//Log.i(TAG,"key = " + key + " metastate = " + metaState + " keycode = " + keyCode + " down = " + down);
+				Log.i(TAG,"key = " + key + " char = " + evt.getUnicodeChar() + " metastate = " + metaState + " keycode = " + keyCode + " down = " + down);
 				rfb.writeKeyEvent(key, metaState, down);
 			} catch (Exception e) {
 				e.printStackTrace();
