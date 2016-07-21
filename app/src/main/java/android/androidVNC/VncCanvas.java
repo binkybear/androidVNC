@@ -51,6 +51,7 @@ import android.widget.Toast;
 
 import com.antlersoft.android.bc.BCFactory;
 
+import com.sun.jna.examples.unix.X11KeySymDef;
 
 public class VncCanvas extends ImageView {
 	private final static String TAG = "VncCanvas";
@@ -474,6 +475,289 @@ public class VncCanvas extends ImageView {
 		e.setLocation(absoluteXPosition + e.getX() / scale, absoluteYPosition + e.getY() / scale);
 		
 		return e;
+	}
+
+	/**
+	 * Convert Android key code (as received by an onKeyDown event) to RFB KeyEvent codes.
+	 */
+	static int convertKeyCode(int keyCode)
+	{
+		switch(keyCode) {
+			case KeyEvent.KEYCODE_UNKNOWN:                          return X11KeySymDef.XK_VoidSymbol;
+		//	case KeyEvent.KEYCODE_SOFT_LEFT:                        return X11KeySymDef.XK_SOFT_LEFT;
+		//	case KeyEvent.KEYCODE_SOFT_RIGHT:                       return X11KeySymDef.XK_SOFT_RIGHT;
+			case KeyEvent.KEYCODE_HOME:                             return X11KeySymDef.XK_Home;
+			case KeyEvent.KEYCODE_BACK:                             return X11KeySymDef.XK_Escape;
+		//	case KeyEvent.KEYCODE_CALL:                             return X11KeySymDef.XK_CALL;
+		//	case KeyEvent.KEYCODE_ENDCALL:                          return X11KeySymDef.XK_ENDCALL;
+			case KeyEvent.KEYCODE_0:                                return X11KeySymDef.XK_0;
+			case KeyEvent.KEYCODE_1:                                return X11KeySymDef.XK_1;
+			case KeyEvent.KEYCODE_2:                                return X11KeySymDef.XK_2;
+			case KeyEvent.KEYCODE_3:                                return X11KeySymDef.XK_3;
+			case KeyEvent.KEYCODE_4:                                return X11KeySymDef.XK_4;
+			case KeyEvent.KEYCODE_5:                                return X11KeySymDef.XK_5;
+			case KeyEvent.KEYCODE_6:                                return X11KeySymDef.XK_6;
+			case KeyEvent.KEYCODE_7:                                return X11KeySymDef.XK_7;
+			case KeyEvent.KEYCODE_8:                                return X11KeySymDef.XK_8;
+			case KeyEvent.KEYCODE_9:                                return X11KeySymDef.XK_9;
+		//	case KeyEvent.KEYCODE_STAR:                             return X11KeySymDef.XK_STAR;
+		//	case KeyEvent.KEYCODE_POUND:                            return X11KeySymDef.XK_POUND;
+			case KeyEvent.KEYCODE_DPAD_UP:                          return X11KeySymDef.XK_Up;
+			case KeyEvent.KEYCODE_DPAD_DOWN:                        return X11KeySymDef.XK_Down;
+			case KeyEvent.KEYCODE_DPAD_LEFT:                        return X11KeySymDef.XK_Left;
+			case KeyEvent.KEYCODE_DPAD_RIGHT:                       return X11KeySymDef.XK_Right;
+			case KeyEvent.KEYCODE_DPAD_CENTER:                      return X11KeySymDef.XK_Return;
+		//	case KeyEvent.KEYCODE_VOLUME_UP:                        return X11KeySymDef.XK_VOLUME_UP;
+		//	case KeyEvent.KEYCODE_VOLUME_DOWN:                      return X11KeySymDef.XK_VOLUME_DOWN;
+		//	case KeyEvent.KEYCODE_POWER:                            return X11KeySymDef.XK_POWER;
+		//	case KeyEvent.KEYCODE_CAMERA:                           return X11KeySymDef.XK_CAMERA;
+		//	case KeyEvent.KEYCODE_CLEAR:                            return X11KeySymDef.XK_CLEAR;
+			case KeyEvent.KEYCODE_A:                                return X11KeySymDef.XK_a;
+			case KeyEvent.KEYCODE_B:                                return X11KeySymDef.XK_b;
+			case KeyEvent.KEYCODE_C:                                return X11KeySymDef.XK_c;
+			case KeyEvent.KEYCODE_D:                                return X11KeySymDef.XK_d;
+			case KeyEvent.KEYCODE_E:                                return X11KeySymDef.XK_e;
+			case KeyEvent.KEYCODE_F:                                return X11KeySymDef.XK_f;
+			case KeyEvent.KEYCODE_G:                                return X11KeySymDef.XK_g;
+			case KeyEvent.KEYCODE_H:                                return X11KeySymDef.XK_h;
+			case KeyEvent.KEYCODE_I:                                return X11KeySymDef.XK_i;
+			case KeyEvent.KEYCODE_J:                                return X11KeySymDef.XK_j;
+			case KeyEvent.KEYCODE_K:                                return X11KeySymDef.XK_k;
+			case KeyEvent.KEYCODE_L:                                return X11KeySymDef.XK_l;
+			case KeyEvent.KEYCODE_M:                                return X11KeySymDef.XK_m;
+			case KeyEvent.KEYCODE_N:                                return X11KeySymDef.XK_n;
+			case KeyEvent.KEYCODE_O:                                return X11KeySymDef.XK_o;
+			case KeyEvent.KEYCODE_P:                                return X11KeySymDef.XK_p;
+			case KeyEvent.KEYCODE_Q:                                return X11KeySymDef.XK_q;
+			case KeyEvent.KEYCODE_R:                                return X11KeySymDef.XK_r;
+			case KeyEvent.KEYCODE_S:                                return X11KeySymDef.XK_s;
+			case KeyEvent.KEYCODE_T:                                return X11KeySymDef.XK_t;
+			case KeyEvent.KEYCODE_U:                                return X11KeySymDef.XK_u;
+			case KeyEvent.KEYCODE_V:                                return X11KeySymDef.XK_v;
+			case KeyEvent.KEYCODE_W:                                return X11KeySymDef.XK_w;
+			case KeyEvent.KEYCODE_X:                                return X11KeySymDef.XK_x;
+			case KeyEvent.KEYCODE_Y:                                return X11KeySymDef.XK_y;
+			case KeyEvent.KEYCODE_Z:                                return X11KeySymDef.XK_z;
+			case KeyEvent.KEYCODE_COMMA:                            return X11KeySymDef.XK_comma;
+			case KeyEvent.KEYCODE_PERIOD:                           return X11KeySymDef.XK_period;
+			case KeyEvent.KEYCODE_ALT_LEFT:                         return X11KeySymDef.XK_Alt_L;
+			case KeyEvent.KEYCODE_ALT_RIGHT:                        return X11KeySymDef.XK_Alt_R;
+			case KeyEvent.KEYCODE_SHIFT_LEFT:                       return X11KeySymDef.XK_Shift_L;
+			case KeyEvent.KEYCODE_SHIFT_RIGHT:                      return X11KeySymDef.XK_Shift_R;
+			case KeyEvent.KEYCODE_TAB:                              return X11KeySymDef.XK_Tab;
+			case KeyEvent.KEYCODE_SPACE:                            return X11KeySymDef.XK_space;
+//			case KeyEvent.KEYCODE_SYM:                              return X11KeySymDef.XK_SYM;
+//			case KeyEvent.KEYCODE_EXPLORER:                         return X11KeySymDef.XK_EXPLORER;
+//			case KeyEvent.KEYCODE_ENVELOPE:                         return X11KeySymDef.XK_ENVELOPE;
+			case KeyEvent.KEYCODE_ENTER:                            return X11KeySymDef.XK_Return;
+			case KeyEvent.KEYCODE_DEL:                              return X11KeySymDef.XK_BackSpace;
+			case KeyEvent.KEYCODE_GRAVE:                            return X11KeySymDef.XK_grave;
+			case KeyEvent.KEYCODE_MINUS:                            return X11KeySymDef.XK_minus;
+			case KeyEvent.KEYCODE_EQUALS:                           return X11KeySymDef.XK_equal;
+			case KeyEvent.KEYCODE_LEFT_BRACKET:                     return X11KeySymDef.XK_bracketleft;
+			case KeyEvent.KEYCODE_RIGHT_BRACKET:                    return X11KeySymDef.XK_bracketright;
+			case KeyEvent.KEYCODE_BACKSLASH:                        return X11KeySymDef.XK_backslash;
+			case KeyEvent.KEYCODE_SEMICOLON:                        return X11KeySymDef.XK_semicolon;
+			case KeyEvent.KEYCODE_APOSTROPHE:                       return X11KeySymDef.XK_apostrophe;
+			case KeyEvent.KEYCODE_SLASH:                            return X11KeySymDef.XK_slash;
+			case KeyEvent.KEYCODE_AT:                               return X11KeySymDef.XK_at;
+			case KeyEvent.KEYCODE_NUM:                              return X11KeySymDef.XK_numbersign;
+//			case KeyEvent.KEYCODE_HEADSETHOOK:                      return X11KeySymDef.XK_HEADSETHOOK;
+//			case KeyEvent.KEYCODE_FOCUS:                            return X11KeySymDef.XK_FOCUS;
+			case KeyEvent.KEYCODE_PLUS:                             return X11KeySymDef.XK_KP_Add;
+			case KeyEvent.KEYCODE_MENU:                             return X11KeySymDef.XK_Menu;
+//			case KeyEvent.KEYCODE_NOTIFICATION:                     return X11KeySymDef.XK_NOTIFICATION;
+//			case KeyEvent.KEYCODE_SEARCH:                           return X11KeySymDef.XK_SEARCH;
+//			case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:                 return X11KeySymDef.XK_MEDIA_PLAY_PAUSE;
+//			case KeyEvent.KEYCODE_MEDIA_STOP:                       return X11KeySymDef.XK_MEDIA_STOP;
+//			case KeyEvent.KEYCODE_MEDIA_NEXT:                       return X11KeySymDef.XK_MEDIA_NEXT;
+//			case KeyEvent.KEYCODE_MEDIA_PREVIOUS:                   return X11KeySymDef.XK_MEDIA_PREVIOUS;
+//			case KeyEvent.KEYCODE_MEDIA_REWIND:                     return X11KeySymDef.XK_MEDIA_REWIND;
+//			case KeyEvent.KEYCODE_MEDIA_FAST_FORWARD:               return X11KeySymDef.XK_MEDIA_FAST_FORWARD;
+//			case KeyEvent.KEYCODE_MUTE:                             return X11KeySymDef.XK_MUTE;
+			case KeyEvent.KEYCODE_PAGE_UP:                          return X11KeySymDef.XK_Page_Up;
+			case KeyEvent.KEYCODE_PAGE_DOWN:                        return X11KeySymDef.XK_Page_Down;
+//			case KeyEvent.KEYCODE_PICTSYMBOLS:                      return X11KeySymDef.XK_PICTSYMBOLS;
+//			case KeyEvent.KEYCODE_SWITCH_CHARSET:                   return X11KeySymDef.XK_SWITCH_CHARSET;
+//			case KeyEvent.KEYCODE_BUTTON_A:                         return X11KeySymDef.XK_BUTTON_A;
+//			case KeyEvent.KEYCODE_BUTTON_B:                         return X11KeySymDef.XK_BUTTON_B;
+//			case KeyEvent.KEYCODE_BUTTON_C:                         return X11KeySymDef.XK_BUTTON_C;
+//			case KeyEvent.KEYCODE_BUTTON_X:                         return X11KeySymDef.XK_BUTTON_X;
+//			case KeyEvent.KEYCODE_BUTTON_Y:                         return X11KeySymDef.XK_BUTTON_Y;
+//			case KeyEvent.KEYCODE_BUTTON_Z:                         return X11KeySymDef.XK_BUTTON_Z;
+//			case KeyEvent.KEYCODE_BUTTON_L1:                        return X11KeySymDef.XK_BUTTON_L1;
+//			case KeyEvent.KEYCODE_BUTTON_R1:                        return X11KeySymDef.XK_BUTTON_R1;
+//			case KeyEvent.KEYCODE_BUTTON_L2:                        return X11KeySymDef.XK_BUTTON_L2;
+//			case KeyEvent.KEYCODE_BUTTON_R2:                        return X11KeySymDef.XK_BUTTON_R2;
+//			case KeyEvent.KEYCODE_BUTTON_THUMBL:                    return X11KeySymDef.XK_BUTTON_THUMBL;
+//			case KeyEvent.KEYCODE_BUTTON_THUMBR:                    return X11KeySymDef.XK_BUTTON_THUMBR;
+//			case KeyEvent.KEYCODE_BUTTON_START:                     return X11KeySymDef.XK_BUTTON_START;
+//			case KeyEvent.KEYCODE_BUTTON_SELECT:                    return X11KeySymDef.XK_BUTTON_SELECT;
+//			case KeyEvent.KEYCODE_BUTTON_MODE:                      return X11KeySymDef.XK_BUTTON_MODE;
+			case KeyEvent.KEYCODE_ESCAPE:                           return X11KeySymDef.XK_Escape;
+			case KeyEvent.KEYCODE_FORWARD_DEL:                      return X11KeySymDef.XK_Delete;
+			case KeyEvent.KEYCODE_CTRL_LEFT:                        return X11KeySymDef.XK_Control_L;
+			case KeyEvent.KEYCODE_CTRL_RIGHT:                       return X11KeySymDef.XK_Control_R;
+			case KeyEvent.KEYCODE_CAPS_LOCK:                        return X11KeySymDef.XK_Caps_Lock;
+			case KeyEvent.KEYCODE_SCROLL_LOCK:                      return X11KeySymDef.XK_Scroll_Lock;
+			case KeyEvent.KEYCODE_META_LEFT:                        return X11KeySymDef.XK_Meta_L;
+			case KeyEvent.KEYCODE_META_RIGHT:                       return X11KeySymDef.XK_Meta_R;
+			case KeyEvent.KEYCODE_FUNCTION:                         return X11KeySymDef.XK_function;
+			case KeyEvent.KEYCODE_SYSRQ:                            return X11KeySymDef.XK_Sys_Req;
+			case KeyEvent.KEYCODE_BREAK:                            return X11KeySymDef.XK_Break;
+			case KeyEvent.KEYCODE_MOVE_HOME:                        return X11KeySymDef.XK_Home;
+			case KeyEvent.KEYCODE_MOVE_END:                         return X11KeySymDef.XK_End;
+			case KeyEvent.KEYCODE_INSERT:                           return X11KeySymDef.XK_Insert;
+//			case KeyEvent.KEYCODE_FORWARD:                          return X11KeySymDef.XK_FORWARD;
+//			case KeyEvent.KEYCODE_MEDIA_PLAY:                       return X11KeySymDef.XK_MEDIA_PLAY;
+//			case KeyEvent.KEYCODE_MEDIA_PAUSE:                      return X11KeySymDef.XK_MEDIA_PAUSE;
+//			case KeyEvent.KEYCODE_MEDIA_CLOSE:                      return X11KeySymDef.XK_MEDIA_CLOSE;
+//			case KeyEvent.KEYCODE_MEDIA_EJECT:                      return X11KeySymDef.XK_MEDIA_EJECT;
+//			case KeyEvent.KEYCODE_MEDIA_RECORD:                     return X11KeySymDef.XK_MEDIA_RECORD;
+			case KeyEvent.KEYCODE_F1:                               return X11KeySymDef.XK_F1;
+			case KeyEvent.KEYCODE_F2:                               return X11KeySymDef.XK_F2;
+			case KeyEvent.KEYCODE_F3:                               return X11KeySymDef.XK_F3;
+			case KeyEvent.KEYCODE_F4:                               return X11KeySymDef.XK_F4;
+			case KeyEvent.KEYCODE_F5:                               return X11KeySymDef.XK_F5;
+			case KeyEvent.KEYCODE_F6:                               return X11KeySymDef.XK_F6;
+			case KeyEvent.KEYCODE_F7:                               return X11KeySymDef.XK_F7;
+			case KeyEvent.KEYCODE_F8:                               return X11KeySymDef.XK_F8;
+			case KeyEvent.KEYCODE_F9:                               return X11KeySymDef.XK_F9;
+			case KeyEvent.KEYCODE_F10:                              return X11KeySymDef.XK_F10;
+			case KeyEvent.KEYCODE_F11:                              return X11KeySymDef.XK_F11;
+			case KeyEvent.KEYCODE_F12:                              return X11KeySymDef.XK_F12;
+			case KeyEvent.KEYCODE_NUM_LOCK:                         return X11KeySymDef.XK_Num_Lock;
+			case KeyEvent.KEYCODE_NUMPAD_0:                         return X11KeySymDef.XK_KP_0;
+			case KeyEvent.KEYCODE_NUMPAD_1:                         return X11KeySymDef.XK_KP_1;
+			case KeyEvent.KEYCODE_NUMPAD_2:                         return X11KeySymDef.XK_KP_2;
+			case KeyEvent.KEYCODE_NUMPAD_3:                         return X11KeySymDef.XK_KP_3;
+			case KeyEvent.KEYCODE_NUMPAD_4:                         return X11KeySymDef.XK_KP_4;
+			case KeyEvent.KEYCODE_NUMPAD_5:                         return X11KeySymDef.XK_KP_5;
+			case KeyEvent.KEYCODE_NUMPAD_6:                         return X11KeySymDef.XK_KP_6;
+			case KeyEvent.KEYCODE_NUMPAD_7:                         return X11KeySymDef.XK_KP_7;
+			case KeyEvent.KEYCODE_NUMPAD_8:                         return X11KeySymDef.XK_KP_8;
+			case KeyEvent.KEYCODE_NUMPAD_9:                         return X11KeySymDef.XK_KP_9;
+			case KeyEvent.KEYCODE_NUMPAD_DIVIDE:                    return X11KeySymDef.XK_KP_Divide;
+			case KeyEvent.KEYCODE_NUMPAD_MULTIPLY:                  return X11KeySymDef.XK_KP_Multiply;
+			case KeyEvent.KEYCODE_NUMPAD_SUBTRACT:                  return X11KeySymDef.XK_KP_Subtract;
+			case KeyEvent.KEYCODE_NUMPAD_ADD:                       return X11KeySymDef.XK_KP_Add;
+			case KeyEvent.KEYCODE_NUMPAD_DOT:                       return X11KeySymDef.XK_KP_Decimal;
+//			case KeyEvent.KEYCODE_NUMPAD_COMMA:                     return X11KeySymDef.XK_KP_Decimal;
+			case KeyEvent.KEYCODE_NUMPAD_ENTER:                     return X11KeySymDef.XK_KP_Enter;
+			case KeyEvent.KEYCODE_NUMPAD_EQUALS:                    return X11KeySymDef.XK_KP_Equal;
+//			case KeyEvent.KEYCODE_NUMPAD_LEFT_PAREN:                return X11KeySymDef.XK_NUMPAD_LEFT_PAREN;
+//			case KeyEvent.KEYCODE_NUMPAD_RIGHT_PAREN:               return X11KeySymDef.XK_NUMPAD_RIGHT_PAREN;
+//			case KeyEvent.KEYCODE_VOLUME_MUTE:                      return X11KeySymDef.XK_VOLUME_MUTE;
+//			case KeyEvent.KEYCODE_INFO:                             return X11KeySymDef.XK_INFO;
+//			case KeyEvent.KEYCODE_CHANNEL_UP:                       return X11KeySymDef.XK_CHANNEL_UP;
+//			case KeyEvent.KEYCODE_CHANNEL_DOWN:                     return X11KeySymDef.XK_CHANNEL_DOWN;
+//			case KeyEvent.KEYCODE_ZOOM_IN:                          return X11KeySymDef.XK_ZOOM_IN;
+//			case KeyEvent.KEYCODE_ZOOM_OUT:                         return X11KeySymDef.XK_ZOOM_OUT;
+//			case KeyEvent.KEYCODE_TV:                               return X11KeySymDef.XK_TV;
+//			case KeyEvent.KEYCODE_WINDOW:                           return X11KeySymDef.XK_WINDOW;
+//			case KeyEvent.KEYCODE_GUIDE:                            return X11KeySymDef.XK_GUIDE;
+//			case KeyEvent.KEYCODE_DVR:                              return X11KeySymDef.XK_DVR;
+//			case KeyEvent.KEYCODE_BOOKMARK:                         return X11KeySymDef.XK_BOOKMARK;
+//			case KeyEvent.KEYCODE_CAPTIONS:                         return X11KeySymDef.XK_CAPTIONS;
+//			case KeyEvent.KEYCODE_SETTINGS:                         return X11KeySymDef.XK_SETTINGS;
+//			case KeyEvent.KEYCODE_TV_POWER:                         return X11KeySymDef.XK_TV_POWER;
+//			case KeyEvent.KEYCODE_TV_INPUT:                         return X11KeySymDef.XK_TV_INPUT;
+//			case KeyEvent.KEYCODE_STB_POWER:                        return X11KeySymDef.XK_STB_POWER;
+//			case KeyEvent.KEYCODE_STB_INPUT:                        return X11KeySymDef.XK_STB_INPUT;
+//			case KeyEvent.KEYCODE_AVR_POWER:                        return X11KeySymDef.XK_AVR_POWER;
+//			case KeyEvent.KEYCODE_AVR_INPUT:                        return X11KeySymDef.XK_AVR_INPUT;
+//			case KeyEvent.KEYCODE_PROG_RED:                         return X11KeySymDef.XK_PROG_RED;
+//			case KeyEvent.KEYCODE_PROG_GREEN:                       return X11KeySymDef.XK_PROG_GREEN;
+//			case KeyEvent.KEYCODE_PROG_YELLOW:                      return X11KeySymDef.XK_PROG_YELLOW;
+//			case KeyEvent.KEYCODE_PROG_BLUE:                        return X11KeySymDef.XK_PROG_BLUE;
+//			case KeyEvent.KEYCODE_APP_SWITCH:                       return X11KeySymDef.XK_APP_SWITCH;
+//			case KeyEvent.KEYCODE_BUTTON_1:                         return X11KeySymDef.XK_BUTTON_1;
+//			case KeyEvent.KEYCODE_BUTTON_2:                         return X11KeySymDef.XK_BUTTON_2;
+//			case KeyEvent.KEYCODE_BUTTON_3:                         return X11KeySymDef.XK_BUTTON_3;
+//			case KeyEvent.KEYCODE_BUTTON_4:                         return X11KeySymDef.XK_BUTTON_4;
+//			case KeyEvent.KEYCODE_BUTTON_5:                         return X11KeySymDef.XK_BUTTON_5;
+//			case KeyEvent.KEYCODE_BUTTON_6:                         return X11KeySymDef.XK_BUTTON_6;
+//			case KeyEvent.KEYCODE_BUTTON_7:                         return X11KeySymDef.XK_BUTTON_7;
+//			case KeyEvent.KEYCODE_BUTTON_8:                         return X11KeySymDef.XK_BUTTON_8;
+//			case KeyEvent.KEYCODE_BUTTON_9:                         return X11KeySymDef.XK_BUTTON_9;
+//			case KeyEvent.KEYCODE_BUTTON_10:                        return X11KeySymDef.XK_BUTTON_10;
+//			case KeyEvent.KEYCODE_BUTTON_11:                        return X11KeySymDef.XK_BUTTON_11;
+//			case KeyEvent.KEYCODE_BUTTON_12:                        return X11KeySymDef.XK_BUTTON_12;
+//			case KeyEvent.KEYCODE_BUTTON_13:                        return X11KeySymDef.XK_BUTTON_13;
+//			case KeyEvent.KEYCODE_BUTTON_14:                        return X11KeySymDef.XK_BUTTON_14;
+//			case KeyEvent.KEYCODE_BUTTON_15:                        return X11KeySymDef.XK_BUTTON_15;
+//			case KeyEvent.KEYCODE_BUTTON_16:                        return X11KeySymDef.XK_BUTTON_16;
+//			case KeyEvent.KEYCODE_LANGUAGE_SWITCH:                  return X11KeySymDef.XK_LANGUAGE_SWITCH;
+//			case KeyEvent.KEYCODE_MANNER_MODE:                      return X11KeySymDef.XK_MANNER_MODE;
+//			case KeyEvent.KEYCODE_3D_MODE:                          return X11KeySymDef.XK_3D_MODE;
+//			case KeyEvent.KEYCODE_CONTACTS:                         return X11KeySymDef.XK_CONTACTS;
+//			case KeyEvent.KEYCODE_CALENDAR:                         return X11KeySymDef.XK_CALENDAR;
+//			case KeyEvent.KEYCODE_MUSIC:                            return X11KeySymDef.XK_MUSIC;
+//			case KeyEvent.KEYCODE_CALCULATOR:                       return X11KeySymDef.XK_CALCULATOR;
+//			case KeyEvent.KEYCODE_ZENKAKU_HANKAKU:                  return X11KeySymDef.XK_ZENKAKU_HANKAKU;
+//			case KeyEvent.KEYCODE_EISU:                             return X11KeySymDef.XK_EISU;
+//			case KeyEvent.KEYCODE_MUHENKAN:                         return X11KeySymDef.XK_MUHENKAN;
+//			case KeyEvent.KEYCODE_HENKAN:                           return X11KeySymDef.XK_HENKAN;
+//			case KeyEvent.KEYCODE_KATAKANA_HIRAGANA:                return X11KeySymDef.XK_KATAKANA_HIRAGANA;
+//			case KeyEvent.KEYCODE_YEN:                              return X11KeySymDef.XK_YEN;
+//			case KeyEvent.KEYCODE_RO:                               return X11KeySymDef.XK_RO;
+//			case KeyEvent.KEYCODE_KANA:                             return X11KeySymDef.XK_KANA;
+//			case KeyEvent.KEYCODE_ASSIST:                           return X11KeySymDef.XK_ASSIST;
+//			case KeyEvent.KEYCODE_BRIGHTNESS_DOWN:                  return X11KeySymDef.XK_BRIGHTNESS_DOWN;
+//			case KeyEvent.KEYCODE_BRIGHTNESS_UP:                    return X11KeySymDef.XK_BRIGHTNESS_UP;
+//			case KeyEvent.KEYCODE_MEDIA_AUDIO_TRACK:                return X11KeySymDef.XK_MEDIA_AUDIO_TRACK;
+//			case KeyEvent.KEYCODE_SLEEP:                            return X11KeySymDef.XK_SLEEP;
+//			case KeyEvent.KEYCODE_WAKEUP:                           return X11KeySymDef.XK_WAKEUP;
+//			case KeyEvent.KEYCODE_PAIRING:                          return X11KeySymDef.XK_PAIRING;
+//			case KeyEvent.KEYCODE_MEDIA_TOP_MENU:                   return X11KeySymDef.XK_MEDIA_TOP_MENU;
+//			case KeyEvent.KEYCODE_11:                               return X11KeySymDef.XK_11;
+//			case KeyEvent.KEYCODE_12:                               return X11KeySymDef.XK_12;
+//			case KeyEvent.KEYCODE_LAST_CHANNEL:                     return X11KeySymDef.XK_LAST_CHANNEL;
+//			case KeyEvent.KEYCODE_TV_DATA_SERVICE:                  return X11KeySymDef.XK_TV_DATA_SERVICE;
+//			case KeyEvent.KEYCODE_VOICE_ASSIST:                     return X11KeySymDef.XK_VOICE_ASSIST;
+//			case KeyEvent.KEYCODE_TV_RADIO_SERVICE:                 return X11KeySymDef.XK_TV_RADIO_SERVICE;
+//			case KeyEvent.KEYCODE_TV_TELETEXT:                      return X11KeySymDef.XK_TV_TELETEXT;
+//			case KeyEvent.KEYCODE_TV_NUMBER_ENTRY:                  return X11KeySymDef.XK_TV_NUMBER_ENTRY;
+//			case KeyEvent.KEYCODE_TV_TERRESTRIAL_ANALOG:            return X11KeySymDef.XK_TV_TERRESTRIAL_ANALOG;
+//			case KeyEvent.KEYCODE_TV_TERRESTRIAL_DIGITAL:           return X11KeySymDef.XK_TV_TERRESTRIAL_DIGITAL;
+//			case KeyEvent.KEYCODE_TV_SATELLITE:                     return X11KeySymDef.XK_TV_SATELLITE;
+//			case KeyEvent.KEYCODE_TV_SATELLITE_BS:                  return X11KeySymDef.XK_TV_SATELLITE_BS;
+//			case KeyEvent.KEYCODE_TV_SATELLITE_CS:                  return X11KeySymDef.XK_TV_SATELLITE_CS;
+//			case KeyEvent.KEYCODE_TV_SATELLITE_SERVICE:             return X11KeySymDef.XK_TV_SATELLITE_SERVICE;
+//			case KeyEvent.KEYCODE_TV_NETWORK:                       return X11KeySymDef.XK_TV_NETWORK;
+//			case KeyEvent.KEYCODE_TV_ANTENNA_CABLE:                 return X11KeySymDef.XK_TV_ANTENNA_CABLE;
+//			case KeyEvent.KEYCODE_TV_INPUT_HDMI_1:                  return X11KeySymDef.XK_TV_INPUT_HDMI_1;
+//			case KeyEvent.KEYCODE_TV_INPUT_HDMI_2:                  return X11KeySymDef.XK_TV_INPUT_HDMI_2;
+//			case KeyEvent.KEYCODE_TV_INPUT_HDMI_3:                  return X11KeySymDef.XK_TV_INPUT_HDMI_3;
+//			case KeyEvent.KEYCODE_TV_INPUT_HDMI_4:                  return X11KeySymDef.XK_TV_INPUT_HDMI_4;
+//			case KeyEvent.KEYCODE_TV_INPUT_COMPOSITE_1:             return X11KeySymDef.XK_TV_INPUT_COMPOSITE_1;
+//			case KeyEvent.KEYCODE_TV_INPUT_COMPOSITE_2:             return X11KeySymDef.XK_TV_INPUT_COMPOSITE_2;
+//			case KeyEvent.KEYCODE_TV_INPUT_COMPONENT_1:             return X11KeySymDef.XK_TV_INPUT_COMPONENT_1;
+//			case KeyEvent.KEYCODE_TV_INPUT_COMPONENT_2:             return X11KeySymDef.XK_TV_INPUT_COMPONENT_2;
+//			case KeyEvent.KEYCODE_TV_INPUT_VGA_1:                   return X11KeySymDef.XK_TV_INPUT_VGA_1;
+//			case KeyEvent.KEYCODE_TV_AUDIO_DESCRIPTION:             return X11KeySymDef.XK_TV_AUDIO_DESCRIPTION;
+//			case KeyEvent.KEYCODE_TV_AUDIO_DESCRIPTION_MIX_UP:      return X11KeySymDef.XK_TV_AUDIO_DESCRIPTION_MIX_UP;
+//			case KeyEvent.KEYCODE_TV_AUDIO_DESCRIPTION_MIX_DOWN:    return X11KeySymDef.XK_TV_AUDIO_DESCRIPTION_MIX_DOWN;
+//			case KeyEvent.KEYCODE_TV_ZOOM_MODE:                     return X11KeySymDef.XK_TV_ZOOM_MODE;
+//			case KeyEvent.KEYCODE_TV_CONTENTS_MENU:                 return X11KeySymDef.XK_TV_CONTENTS_MENU;
+//			case KeyEvent.KEYCODE_TV_MEDIA_CONTEXT_MENU:            return X11KeySymDef.XK_TV_MEDIA_CONTEXT_MENU;
+//			case KeyEvent.KEYCODE_TV_TIMER_PROGRAMMING:             return X11KeySymDef.XK_TV_TIMER_PROGRAMMING;
+//			case KeyEvent.KEYCODE_HELP:                             return X11KeySymDef.XK_HELP;
+//			case KeyEvent.KEYCODE_NAVIGATE_PREVIOUS:                return X11KeySymDef.XK_NAVIGATE_PREVIOUS;
+//			case KeyEvent.KEYCODE_NAVIGATE_NEXT:                    return X11KeySymDef.XK_NAVIGATE_NEXT;
+//			case KeyEvent.KEYCODE_NAVIGATE_IN:                      return X11KeySymDef.XK_NAVIGATE_IN;
+//			case KeyEvent.KEYCODE_NAVIGATE_OUT:                     return X11KeySymDef.XK_NAVIGATE_OUT;
+//			case KeyEvent.KEYCODE_STEM_PRIMARY:                     return X11KeySymDef.XK_STEM_PRIMARY;
+//			case KeyEvent.KEYCODE_STEM_1:                           return X11KeySymDef.XK_STEM_1;
+//			case KeyEvent.KEYCODE_STEM_2:                           return X11KeySymDef.XK_STEM_2;
+//			case KeyEvent.KEYCODE_STEM_3:                           return X11KeySymDef.XK_STEM_3;
+//			case KeyEvent.KEYCODE_MEDIA_SKIP_FORWARD:               return X11KeySymDef.XK_MEDIA_SKIP_FORWARD;
+//			case KeyEvent.KEYCODE_MEDIA_SKIP_BACKWARD:              return X11KeySymDef.XK_MEDIA_SKIP_BACKWARD;
+//			case KeyEvent.KEYCODE_MEDIA_STEP_FORWARD:               return X11KeySymDef.XK_MEDIA_STEP_FORWARD;
+//			case KeyEvent.KEYCODE_MEDIA_STEP_BACKWARD:              return X11KeySymDef.XK_MEDIA_STEP_BACKWARD;
+//			case KeyEvent.KEYCODE_SOFT_SLEEP:                       return X11KeySymDef.XK_SOFT_SLEEP;
+            default:                                                return 0;
+		}
 	}
 
 	/**
@@ -949,35 +1233,23 @@ public class VncCanvas extends ImageView {
 			return true;
 		}
 		if (rfb != null && rfb.inNormalProtocol) {
-		   boolean down = (evt.getAction() == KeyEvent.ACTION_DOWN);
-		   int key;
-		   int metaState = evt.getMetaState();
-		   
-		   switch(keyCode) {
-		   	  case KeyEvent.KEYCODE_BACK :        key = 0xff1b; break;
-		      case KeyEvent.KEYCODE_DPAD_LEFT:    key = 0xff51; break;
-		   	  case KeyEvent.KEYCODE_DPAD_UP:      key = 0xff52; break;
-		   	  case KeyEvent.KEYCODE_DPAD_RIGHT:   key = 0xff53; break;
-		   	  case KeyEvent.KEYCODE_DPAD_DOWN:    key = 0xff54; break;
-		      case KeyEvent.KEYCODE_DEL: 		  key = 0xff08; break;
-		      case KeyEvent.KEYCODE_ENTER:        key = 0xff0d; break;
-		      case KeyEvent.KEYCODE_DPAD_CENTER:  key = 0xff0d; break;
-		      default: 							  
-		    	  key = evt.getUnicodeChar();
-		    	  metaState = 0;
-		    	  break;
-		    }
-	    	try {
-	    		if (afterMenu)
-	    		{
-	    			afterMenu = false;
-	    			if (!down && key != lastKeyDown)
-	    				return true;
-	    		}
-	    		if (down)
-	    			lastKeyDown = key;
-	    		//Log.i(TAG,"key = " + key + " metastate = " + metaState + " keycode = " + keyCode);
-	    		rfb.writeKeyEvent(key, metaState, down);
+			boolean down = (evt.getAction() == KeyEvent.ACTION_DOWN);
+			int metaState = evt.getMetaState();
+
+			int key = evt.getUnicodeChar();
+			if (key < 0x20)
+				key = convertKeyCode(keyCode);
+			try {
+				if (afterMenu)
+				{
+					afterMenu = false;
+					if (!down && key != lastKeyDown)
+						return true;
+				}
+				if (down)
+					lastKeyDown = key;
+				//Log.i(TAG,"key = " + key + " metastate = " + metaState + " keycode = " + keyCode + " down = " + down);
+				rfb.writeKeyEvent(key, metaState, down);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
