@@ -56,7 +56,7 @@ import android.widget.Button;
 import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 
-public class VncCanvasActivity extends Activity {
+public class VncCanvasActivity extends Activity implements View.OnGenericMotionListener {
 
 	/**
 	 * @author Michael A. MacDonald
@@ -197,6 +197,11 @@ public class VncCanvasActivity extends Activity {
 				return vncCanvas.processPointerEvent(e, true);
 			} else
 				return super.onTouchEvent(e);
+		}
+
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
+			return false;
 		}
 
 		/*
@@ -448,6 +453,11 @@ public class VncCanvasActivity extends Activity {
 				return super.onTouchEvent(e);
 		}
 
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
+			return false;
+		}
+
 		/**
 		 * Modify the event so that it does not move the mouse on the
 		 * remote server.
@@ -512,7 +522,9 @@ public class VncCanvasActivity extends Activity {
 	private boolean trackballButtonDown;
 	private static final int inputModeIds[] = { R.id.itemInputFitToScreen,
 			R.id.itemInputTouchpad,
-			R.id.itemInputMouse, R.id.itemInputPan,
+			R.id.itemInputMouse,
+			R.id.itemInputHardwareMouse,
+			R.id.itemInputPan,
 			R.id.itemInputTouchPanTrackballMouse,
 			R.id.itemInputDPadPanTouchMouse, R.id.itemInputTouchPanZoomMouse };
 
@@ -612,6 +624,7 @@ public class VncCanvasActivity extends Activity {
 				setModes();
 			}
 		});
+		vncCanvas.setOnGenericMotionListener(this);
 		zoomer.hide();
 		zoomer.setOnZoomInClickListener(new View.OnClickListener() {
 
@@ -782,6 +795,9 @@ public class VncCanvasActivity extends Activity {
 						break;
 					case R.id.itemInputMouse:
 						inputModeHandlers[i] = new MouseMode();
+						break;
+					case R.id.itemInputHardwareMouse:
+						inputModeHandlers[i] = new HardwareMouseMode();
 						break;
 					case R.id.itemInputTouchPanTrackballMouse:
 						inputModeHandlers[i] = new TouchPanTrackballMouse();
@@ -989,6 +1005,11 @@ public class VncCanvasActivity extends Activity {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		return inputHandler.onTouchEvent(event);
+	}
+
+	@Override
+	public boolean onGenericMotion(View view, MotionEvent motionEvent) {
+		return inputHandler.onGenericMotion(motionEvent);
 	}
 
 	private void selectColorModel() {
@@ -1221,6 +1242,11 @@ public class VncCanvasActivity extends Activity {
 			return touchPan(event);
 		}
 
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
+			return false;
+		}
+
 		/*
 		 * (non-Javadoc)
 		 * 
@@ -1293,6 +1319,11 @@ public class VncCanvasActivity extends Activity {
 		@Override
 		public boolean onTouchEvent(MotionEvent evt) {
 			return touchPan(evt);
+		}
+
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
+			return false;
 		}
 
 		/*
@@ -1373,6 +1404,11 @@ public class VncCanvasActivity extends Activity {
 		 */
 		@Override
 		public boolean onTouchEvent(MotionEvent evt) {
+			return false;
+		}
+
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
 			return false;
 		}
 
@@ -1464,6 +1500,11 @@ public class VncCanvasActivity extends Activity {
 			return VncCanvasActivity.super.onTouchEvent(event);
 		}
 
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
+			return false;
+		}
+
 		/*
 		 * (non-Javadoc)
 		 * 
@@ -1494,6 +1535,37 @@ public class VncCanvasActivity extends Activity {
 			return "MOUSE";
 		}
 
+	}
+
+	/**
+	 * For hardware mice.
+	 */
+	class HardwareMouseMode extends MouseMode {
+		@Override
+		public boolean onTouchEvent(MotionEvent event) {
+			vncCanvas.changeTouchCoordinatesToFullFrame(event);
+			if (vncCanvas.processPointerEvent(event))
+				return true;
+			return VncCanvasActivity.super.onTouchEvent(event);
+		}
+
+		@Override
+		public boolean onGenericMotion(MotionEvent event) {
+			vncCanvas.changeTouchCoordinatesToFullFrame(event);
+			if (vncCanvas.processPointerEvent(event))
+				return true;
+			return VncCanvasActivity.super.onGenericMotionEvent(event);
+		}
+
+		@Override
+		public CharSequence getHandlerDescription() {
+			return getString(R.string.input_mode_hardware_mouse);
+		}
+
+		@Override
+		public String getName() {
+			return "HARDWARE_MOUSE";
+		}
 	}
 
 	/**
@@ -1602,6 +1674,11 @@ public class VncCanvasActivity extends Activity {
 			if (vncCanvas.processPointerEvent(event, true))
 				return true;
 			return VncCanvasActivity.super.onTouchEvent(event);
+		}
+
+		@Override
+		public boolean onGenericMotion(MotionEvent evt) {
+			return false;
 		}
 
 		/*

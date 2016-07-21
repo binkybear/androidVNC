@@ -79,4 +79,5 @@
     <string name="username_caption">Username</string>
     <string name="username_hint">For Windows Authentication</string>
     <string name="permdesc_open_vnc_conn">Launch custom VNC connections</string>
+    <string name="input_mode_hardware_mouse">Hardware Mouse Mode</string>
 </resources>

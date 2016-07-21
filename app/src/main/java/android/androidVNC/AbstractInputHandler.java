@@ -38,6 +38,8 @@ interface AbstractInputHandler {
 	 * @see android.app.Activity#onTrackballEvent(android.view.MotionEvent)
 	 */
 	boolean onTouchEvent( MotionEvent evt);
+
+	boolean onGenericMotion( MotionEvent evt );
 	
 	/**
 	 * Return a user-friendly description for this mode; it will be displayed in a toaster

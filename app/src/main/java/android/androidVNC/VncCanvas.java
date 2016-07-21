@@ -43,6 +43,7 @@ import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
+import android.view.InputDevice;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.ImageView;
@@ -475,6 +476,40 @@ public class VncCanvas extends ImageView {
 		return e;
 	}
 
+	/**
+	 * Convert Android mouse button codes to RFB PointerEvent codes.
+	 * @param e Original MotionEvent.
+	 * @return -- The RFB button state.
+	 */
+	int convertMouseButtons(MotionEvent e)
+	{
+		int buttons = e.getButtonState();
+		int result = 0;
+		for (int i=0; i<31; i++) {
+			int mask = 1 << i;
+			if ((buttons & mask) != 0) {
+				switch (mask) {
+					case MotionEvent.BUTTON_PRIMARY:
+						result |= MOUSE_BUTTON_LEFT;
+						break;
+					case MotionEvent.BUTTON_SECONDARY:
+						result |= MOUSE_BUTTON_RIGHT;
+						break;
+					case MotionEvent.BUTTON_TERTIARY:
+						result |= MOUSE_BUTTON_MIDDLE;
+						break;
+					case MotionEvent.BUTTON_BACK:
+						result |= MOUSE_BUTTON_BACK;
+						break;
+					case MotionEvent.BUTTON_FORWARD:
+						result |= MOUSE_BUTTON_FORWARD;
+						break;
+				}
+			}
+		}
+		return result;
+	}
+
 	public void onDestroy() {
 		Log.v(TAG, "Cleaning up resources");
 		if ( bitmapData!=null) bitmapData.dispose();
@@ -768,7 +803,9 @@ public class VncCanvas extends ImageView {
 	static final int MOUSE_BUTTON_RIGHT = 4;
 	static final int MOUSE_BUTTON_SCROLL_UP = 8;
 	static final int MOUSE_BUTTON_SCROLL_DOWN = 16;
-	
+	static final int MOUSE_BUTTON_BACK = 32;
+	static final int MOUSE_BUTTON_FORWARD = 64;
+
 	/**
 	 * Current state of "mouse" buttons
 	 * Alt meta means use second mouse button
@@ -802,37 +839,46 @@ public class VncCanvas extends ImageView {
 	public boolean processPointerEvent(MotionEvent evt,boolean downEvent,boolean useRightButton) {
 		return processPointerEvent((int)evt.getX(),(int)evt.getY(), evt.getAction(), evt.getMetaState(), downEvent, useRightButton);
 	}
-	
+
+	public boolean processPointerEvent(MotionEvent evt) {
+		pointerMask = convertMouseButtons(evt);
+		return processPointerEvent((int)evt.getX(), (int)evt.getY(), evt.getMetaState());
+	}
+
 	boolean processPointerEvent(int x, int y, int action, int modifiers, boolean mouseIsDown, boolean useRightButton) {
+		if (action == MotionEvent.ACTION_DOWN || (mouseIsDown && action == MotionEvent.ACTION_MOVE)) {
+			if (useRightButton) {
+				pointerMask = MOUSE_BUTTON_RIGHT;
+			} else {
+				pointerMask = MOUSE_BUTTON_LEFT;
+			}
+		} else if (action == MotionEvent.ACTION_UP) {
+			pointerMask = 0;
+		}
+		return processPointerEvent(x, y, modifiers);
+	}
+
+	boolean processPointerEvent(int x, int y, int modifiers) {
 		if (rfb != null && rfb.inNormalProtocol) {
-		    if (action == MotionEvent.ACTION_DOWN || (mouseIsDown && action == MotionEvent.ACTION_MOVE)) {
-		      if (useRightButton) {
-		        pointerMask = MOUSE_BUTTON_RIGHT;
-		      } else {
-		        pointerMask = MOUSE_BUTTON_LEFT;
-		      }
-		    } else if (action == MotionEvent.ACTION_UP) {
-		      pointerMask = 0;
-		    }
-		    bitmapData.invalidateMousePosition();
-		    mouseX= x;
-		    mouseY= y;
-		    if ( mouseX<0) mouseX=0;
-		    else if ( mouseX>=rfb.framebufferWidth) mouseX=rfb.framebufferWidth-1;
-		    if ( mouseY<0) mouseY=0;
-		    else if ( mouseY>=rfb.framebufferHeight) mouseY=rfb.framebufferHeight-1;
-		    bitmapData.invalidateMousePosition();
+			bitmapData.invalidateMousePosition();
+			mouseX= x;
+			mouseY= y;
+			if ( mouseX<0) mouseX=0;
+			else if ( mouseX>=rfb.framebufferWidth) mouseX=rfb.framebufferWidth-1;
+			if ( mouseY<0) mouseY=0;
+			else if ( mouseY>=rfb.framebufferHeight) mouseY=rfb.framebufferHeight-1;
+			bitmapData.invalidateMousePosition();
 			try {
 				rfb.writePointerEvent(mouseX,mouseY,modifiers,pointerMask);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		    panToMouse();
+			panToMouse();
 			return true;
 		}
-		return false;		
+		return false;
 	}
-	
+
 	/**
 	 * Moves the scroll while the volume key is held down
 	 * @author Michael A. MacDonald
@@ -865,6 +911,9 @@ public class VncCanvas extends ImageView {
 	public boolean processLocalKeyEvent(int keyCode, KeyEvent evt) {
 		if (keyCode == KeyEvent.KEYCODE_MENU)
 			// Ignore menu key
+			return true;
+		if (keyCode == KeyEvent.KEYCODE_BACK && evt.getSource() == InputDevice.SOURCE_MOUSE)
+			// Ignore right click
 			return true;
 		if (keyCode == KeyEvent.KEYCODE_CAMERA)
 		{
